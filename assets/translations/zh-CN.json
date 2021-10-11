@@ -1,0 +1,33 @@
+{
+  "label": {
+    "login": "登录",
+    "register": "注册",
+    "language": {
+      "name": {
+        "en": "英语",
+        "zh": "中文"
+      },
+      "selection": {
+        "message": "请从列表中选择一种语言",
+        "title": "选择语言"
+      }
+    },
+    "form": {
+      "username": "用户名",
+      "your_username": "您的用户名",
+      "password": "密码",
+      "your_password": "您的密码"
+    },
+    "button": {
+      "cancel": "取消",
+      "login": "登录",
+      "signUp": "注册"
+    }
+  },
+  "message": {
+    "forget_password": "忘记密码？",
+    "other_login_method": "其他账号登录",
+    "no_account": "没有账号？",
+    "now_register": "立即注册"
+  }
+}

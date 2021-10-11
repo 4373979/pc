@@ -1,0 +1,33 @@
+{
+  "label": {
+    "login": "Login",
+    "register": "Register",
+    "language": {
+      "name": {
+        "en": "English",
+        "zh": "Chinese"
+      },
+      "selection": {
+        "message": "Please select a language from the list",
+        "title": "Language Selection"
+      }
+    },
+    "form": {
+      "username": "User ID",
+      "your_username": "Your User ID",
+      "password": "Password",
+      "your_password": "Your Password"
+    },
+    "button": {
+      "cancel": "Cancel",
+      "login": "Log in",
+      "signUp": "Sign up"
+    }
+  },
+  "message": {
+    "forget_password": "Forget the password?",
+    "other_login_method": "Login with other accounts",
+    "no_account": "No account?",
+    "now_register": "sign up right away"
+  }
+}
