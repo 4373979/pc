@@ -1,7 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:ionicons/ionicons.dart';
 import 'package:pc/widgets/login/login_widgets.dart';
 import 'package:pc/widgets/register/register_widgets.dart';
 
@@ -24,7 +23,7 @@ class _LoginPageState extends State<RegisterPage> {
               child: SingleChildScrollView(
                 child: Column(
                   children: <Widget>[
-                    const SizedBox(height: 60),
+                    const SizedBox(height: 56),
                     buildArrowBackOutline(context),
                     const SizedBox(height: 20),
                     buildRegisterText(),

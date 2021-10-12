@@ -8,7 +8,7 @@ Widget buildArrowBackOutline(BuildContext context){
   return Row(
     children: [
       IconButton(
-        icon: const Icon(Ionicons.arrow_back_outline),
+        icon: const Icon(Ionicons.close_outline),
         iconSize: 30,
         color: Colors.black,
         onPressed: (){

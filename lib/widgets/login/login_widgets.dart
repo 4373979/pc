@@ -23,7 +23,7 @@ Widget buildLoginText(){
   );
 }
 
-Widget buildLoginButton(){
+Widget buildLoginButton(BuildContext context,_formKey,username,password){
   return MaterialButton(
     minWidth: 250,
     height: 45,
@@ -32,7 +32,10 @@ Widget buildLoginButton(){
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(30),
     ),
-    onPressed: () {},
+    onPressed: () {
+      print("MaterialButton"+username+":"+password);
+      userLogin(context,_formKey,username,password);
+    },
   );
 }
 
