@@ -66,7 +66,7 @@ Widget buildToRegister(BuildContext context){
       Text('message.no_account'.tr(),style: const TextStyle(fontSize: 14)),
       TextButton(
         onPressed: (){
-          Navigator.of(context).pushNamed('/register');
+          Navigator.of(context).pushReplacementNamed('/register');
         },
         child: Text("message.now_register".tr(),style: const TextStyle(color: Colors.green,fontSize: 14)),
       )
