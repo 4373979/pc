@@ -41,6 +41,8 @@ dependencies:
   ionicons: ^0.1.2
   #network
   dio: ^4.0.0
+  #toast
+  fluttertoast: ^8.0.8
 
 dev_dependencies:
   flutter_test:

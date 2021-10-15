@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:pc/models/login_model.dart';
 import 'package:pc/services/login_service.dart';
 
@@ -47,16 +48,22 @@ void userLogin(BuildContext context,_formKey,username,password) {
   if (_formKey.currentState!.validate()) {
     // print("userLogin"+username+"："+password);
     LoginModel loginModel = LoginModel(username, password);
-    UserService userService = UserService();
-    userService
+    LoginService loginService = LoginService();
+    loginService
         .loginRequest(loginModel).then((value) =>
-    ScaffoldMessenger.of(context)
-      ..removeCurrentSnackBar()
-      ..showSnackBar(SnackBar(content: Text('登录成功'.tr())))
+        Fluttertoast.showToast(
+            msg: 'message.login_success'.tr(),
+            toastLength: Toast.LENGTH_SHORT,
+            gravity: ToastGravity.CENTER,
+            timeInSecForIosWeb: 1,
+            backgroundColor: Colors.red,
+            textColor: Colors.white,
+            fontSize: 16.0
+        )
     ).catchError((error) {
       ScaffoldMessenger.of(context)
         ..removeCurrentSnackBar()
-        ..showSnackBar(SnackBar(content: Text('login_failed'.tr())));
+        ..showSnackBar(SnackBar(content: Text('message.login_failed'.tr())));
     });
   }
 }
