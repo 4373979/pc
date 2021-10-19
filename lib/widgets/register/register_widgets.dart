@@ -27,16 +27,3 @@ Widget buildRegisterText(){
     ],
   );
 }
-
-Widget buildRegisterButton(){
-  return MaterialButton(
-    minWidth: 250,
-    height: 45,
-    child: Text('label.button.signUp'.tr(),style: const TextStyle(color: Colors.white,fontSize: 20)),
-    color: Colors.black,
-    shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(30),
-    ),
-    onPressed: () {},
-  );
-}

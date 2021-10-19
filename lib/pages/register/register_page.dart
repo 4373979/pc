@@ -49,19 +49,7 @@ class _LoginPageState extends State<RegisterPage> {
                       ),
                     ),
                     const SizedBox(height: 30),
-                    // buildRegisterButton(),
-                    MaterialButton(
-                      minWidth: 250,
-                      height: 45,
-                      child: Text('label.button.signUp'.tr(),style: const TextStyle(color: Colors.white,fontSize: 20)),
-                      color: Colors.black,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30),
-                      ),
-                      onPressed: () {
-                        userRegister(context,_formKey,username,password);
-                      },
-                    )
+                    buildReggisterButton(context)
                   ],
                 ),
               )
@@ -108,6 +96,21 @@ class _LoginPageState extends State<RegisterPage> {
           return 'enter_valid_password'.tr();
         }
       }
+    );
+  }
+
+  Widget buildReggisterButton(BuildContext context){
+    return MaterialButton(
+      minWidth: 250,
+      height: 45,
+      child: Text('label.button.signUp'.tr(),style: const TextStyle(color: Colors.white,fontSize: 20)),
+      color: Colors.black,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(30),
+      ),
+      onPressed: () {
+        userRegister(context,_formKey,username,password);
+      },
     );
   }
 }

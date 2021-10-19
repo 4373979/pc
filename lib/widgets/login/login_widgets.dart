@@ -23,22 +23,6 @@ Widget buildLoginText(){
   );
 }
 
-Widget buildLoginButton(BuildContext context,_formKey,username,password){
-  return MaterialButton(
-    minWidth: 250,
-    height: 45,
-    child: Text('label.button.login'.tr(),style: const TextStyle(color: Colors.white,fontSize: 20)),
-    color: Colors.black,
-    shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(30),
-    ),
-    onPressed: () {
-      // print("MaterialButton"+username+":"+password);
-      userLogin(context,_formKey,username,password);
-    },
-  );
-}
-
 Widget buildOtherLoginMethod(){
   return Row(
     mainAxisAlignment: MainAxisAlignment.center,
