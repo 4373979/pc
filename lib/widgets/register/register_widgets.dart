@@ -12,7 +12,8 @@ Widget buildArrowBackOutline(BuildContext context){
         iconSize: 30,
         color: Colors.black,
         onPressed: (){
-          Navigator.of(context).pushReplacementNamed('/login');                          },
+            Navigator.of(context).pushReplacementNamed('/login');
+          },
       )
     ],
   );
