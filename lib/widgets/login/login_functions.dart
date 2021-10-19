@@ -50,20 +50,33 @@ void userLogin(BuildContext context,_formKey,username,password) {
     LoginModel loginModel = LoginModel(username, password);
     LoginService loginService = LoginService();
     loginService
-        .loginRequest(loginModel).then((value) =>
-        Fluttertoast.showToast(
-            msg: 'message.login_success'.tr(),
-            toastLength: Toast.LENGTH_SHORT,
-            gravity: ToastGravity.CENTER,
-            timeInSecForIosWeb: 1,
-            backgroundColor: Colors.red,
-            textColor: Colors.white,
-            fontSize: 16.0
-        )
-    ).catchError((error) {
+        .loginRequest(loginModel).then((value) =>loginVerify(context,value)).catchError((error) {
       ScaffoldMessenger.of(context)
         ..removeCurrentSnackBar()
         ..showSnackBar(SnackBar(content: Text('message.login_failed'.tr())));
     });
+  }
+}
+
+void loginVerify(BuildContext context,value){
+  if(value=="success"){
+    Fluttertoast.showToast(
+        msg: 'message.login_success'.tr(),
+        toastLength: Toast.LENGTH_SHORT,
+        gravity: ToastGravity.CENTER,
+        timeInSecForIosWeb: 1,
+        backgroundColor: Colors.red,
+        textColor: Colors.white,
+        fontSize: 16.0);
+    // Navigator.of(context).pushReplacementNamed('/home');
+  }else{
+    Fluttertoast.showToast(
+        msg: 'message.login_failed'.tr(),
+        toastLength: Toast.LENGTH_SHORT,
+        gravity: ToastGravity.CENTER,
+        timeInSecForIosWeb: 1,
+        backgroundColor: Colors.red,
+        textColor: Colors.white,
+        fontSize: 16.0);
   }
 }

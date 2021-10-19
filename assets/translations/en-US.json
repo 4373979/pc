@@ -30,8 +30,8 @@
     "no_account": "No account?",
     "now_register": "sign up right away",
     "login_success": "Login Success",
-    "register_success": "Register Success",
     "login_failed": "Login Failed",
+    "register_success": "Register Success",
     "register_failed": "Register Failed"
   }
 }

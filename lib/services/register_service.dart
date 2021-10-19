@@ -7,8 +7,8 @@ class RegisterService {
   Future<String?> registerRequest(LoginModel loginModel) async {
 
     // String serverIp = "http://101.34.246.130";
-    // String serverIp = "http://10.0.2.2:8080";
-    String serverIp = "http://192.168.6.152:8080";
+    String serverIp = "http://10.0.2.2:8080";
+    // String serverIp = "http://192.168.6.152:8080";
     // print("111111"+loginModel.username+":"+loginModel.password);
     var options = BaseOptions(
       baseUrl: serverIp,

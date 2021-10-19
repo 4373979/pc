@@ -10,7 +10,7 @@ void userRegister(BuildContext context,_formKey,username,password) {
     LoginModel loginModel = LoginModel(username, password);
     RegisterService registerService = RegisterService();
     registerService
-        .registerRequest(loginModel).then((value) =>loginVerify(context,value)).catchError((error) {
+        .registerRequest(loginModel).then((value) =>registerVerify(context,value)).catchError((error) {
       ScaffoldMessenger.of(context)
         ..removeCurrentSnackBar()
         ..showSnackBar(SnackBar(content: Text('message.register_failed'.tr())));
@@ -18,7 +18,7 @@ void userRegister(BuildContext context,_formKey,username,password) {
   }
 }
 
-void loginVerify(BuildContext context,value){
+void registerVerify(BuildContext context,value){
   if(value=="success"){
     Fluttertoast.showToast(
         msg: 'message.register_success'.tr(),
